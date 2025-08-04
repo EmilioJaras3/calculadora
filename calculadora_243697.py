@@ -247,12 +247,11 @@ class IntegralCalculatorApp(tk.Tk):
     # Panel de gráfica
     def _create_plot_panel(self, parent):
         frame = tk.Frame(parent, **Style.FRAME)
-        frame.pack(fill=tk.BOTH, expand=True) # <-- Cambio aquí: El frame de la gráfica ocupa todo el panel derecho
+        frame.pack(fill=tk.BOTH, expand=True) 
         
         # Aumentamos el padding superior para empujar los botones hacia arriba
         plot_control_frame = tk.Frame(frame, **Style.FRAME)
-        plot_control_frame.pack(fill=tk.X, pady=(10, 5)) # <-- Cambio aquí: de (0, 5) a (10, 5)
-
+        plot_control_frame.pack(fill=tk.X, pady=(10, 5)) 
         # Estilos de los botones de la gráfica
         export_button_style = Style.BUTTON_BASE.copy()
         export_button_style.update({"bg": Style.HIGHLIGHT, "fg": "white", "activeforeground": "white"})
